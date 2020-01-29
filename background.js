@@ -55,7 +55,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     contentType: "application/json",
     data: JSON.stringify(request.data),
     success: (msg) => {
-      console.log(msg);
       // 使用sendResponse向消息源回传响应消息
       sendResponse({
         type: Number(msg.code) === 200 ? 'success' : 'danger',

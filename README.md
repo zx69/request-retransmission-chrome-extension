@@ -1,6 +1,8 @@
 # request-retransmission-chrome-extensions
 Chrome浏览器的扩展程序，用于甄别网站发出的请求，并将符合条件的请求响应通过ajax转发到另一个特定地址。
 
+![display](https://github.com/zx69/request-retransmission-chrome-extension/blob/master/display.gif)
+
 本项目为公司业务需要而开发，实际使用场景为：公司开发的系统需要使用菜鸟物流的实时订单数据，而又没有菜鸟物流的登录权限，因此采用变通方案，在有此权限的客户电脑上加载该插件，之后当该客户访问菜鸟系统时，可直接甄别出获取订单的请求，并将其响应结果转发到我司的系统上。
 
 ### 主要技术要点：
