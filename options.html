@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <style>
+        #btnAddURL{
+          font-weight: 800;
+          margin-bottom: 20px;
+          color: green;
+          border: none;
+          border-radius: 4px;
+        }
+        .form-item + .form-item{
+          margin-top: 10px;
+        }
+        .form-item label {
+          float: left;
+          line-height: 20px;
+        }
+        .form-item .form-item__content{
+          /*float: left;*/
+          margin-left: 70px;
+          /*margin-right: 25px;*/
+        }
+        .clearfix:after{
+          display: block;
+          content: '';
+          clear: both;
+        }
+        .form-item .input__wrapper{
+          width: 100%;
+        }
+        .form-item input:not([type=radio]){
+          display: inline-block;
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+        }
+        .form-item .btn-close{
+          float: right;
+          color: red;
+          font-weight: 800;
+          line-height: 20px;
+          cursor: pointer;
+          padding: 0 5px;
+
+          /*width: 30px;*/
+          /*margin: 0;*/
+          /*padding: 0;*/
+          /*background: none;*/
+          /*outline: none;*/
+        }
+        #formFooter{
+          margin-top: 10px;
+          text-align: right;
+        }
+        #btnSubmit{
+          color: #fff;
+          background: #409eff;
+          display: inline-block;
+          line-height: 1;
+          white-space: nowrap;
+          cursor: pointer;
+          border: 1px solid #409eff;
+          padding: 12px 20px;
+          font-size: 14px;
+          border-radius: 4px;
+          outline: none;
+          font-weight: 500;
+        }
+      </style>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <div id="formContent">
+        <div class="form-item clearfix">
+          <label>
+            监听域名 :
+          </label>
+          <div class="form-item__content">
+            <div class="input__wrapper">
+              <input class="input" id="targetOriginInput">
+            </div>
+          </div>
+        </div>
+        <div class="form-item clearfix">
+          <label>
+            监听URL :
+          </label>
+          <div class="form-item__content">
+            <div class="input__wrapper">
+              <input class="input" id="targetUrlInput">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="form-item clearfix">
+          <label>
+            发送URL :
+          </label>
+          <div class="form-item__content">
+            <div class="input__wrapper">
+              <input class="input" id="requestUrlInput">
+            </div>
+          </div>
+        </div>
+        <div class="form-item clearfix">
+          <label>
+            请求类型 :
+          </label>
+          <div class="form-item__content">
+            <div class="input__wrapper">
+              <input type="radio" name="requestmethod" value="GET">GET</input>
+              <input type="radio" name="requestmethod" value="POST">POST</input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="formFooter">
+        <button id="btnSubmit">保 存</button>
+      </div>
+    </body>
+    <script src="zepto.min.js"></script>
+    <script src="options.js"></script>
+  </html>

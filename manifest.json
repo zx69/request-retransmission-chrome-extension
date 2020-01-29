@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "Request-Retransmission Extensions",
+  "version": "0.0.1",
+  "description": "Capture specific request-response and retransmission",
+  "background": {
+    "scripts": ["zepto.min.js", "background.js"]
+  },
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "icons": {
+    "16": "icons/icon_16.png",
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  // 开发环境options_page采用无样式方案，方便使用chrome-dev-tool调试
+  // "options_page": "options.html",
+  "options_ui": {
+      "page": "options.html",
+      // 使用chrome默认样式，生成环境使用
+      "chrome_style": true
+  },
+  "page_action": {
+    "default_icon": {
+      "16": "icons/icon_16.png",
+      "32": "icons/icon_32.png",
+      "48": "icons/icon_48.png",
+      "128": "icons/icon_128.png"
+    },
+    "default_title": "Content Url Capturer"
+    // "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      // "matches": ["*://*.cainiao.com/*", "*://192.168.1.193/"],
+      // 目前不限制content_script适用的page，后面在考虑限制
+     "matches": ["*://*/*"],
+      "run_at": "document_start",
+      "js": ["zepto.min.js","inject.js", "msgNotice.js","content_script.js"],
+      "css": ["msgNotice.css"]
+    }
+  ],
+  // 注入inject脚本
+  "web_accessible_resources": ["myXHRScript.js"]
+}
