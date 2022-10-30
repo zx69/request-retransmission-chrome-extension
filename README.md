@@ -1,5 +1,5 @@
 <h1 align="center">request-retransmission-chrome-extensions</h1>
-一个Chrome浏览器的扩展程序(chrome extension)，用于甄别网站发出的请求，将符合条件的请求响应，通过ajax转发到另一个特定地址。技术要点在于使用猴子补丁的方法改写XMMHttpRequest，从而实现在扩展程序中获取请求的responseBody的逻辑。
+一个Chrome浏览器的扩展程序(chrome extension)，用于甄别网站发出的请求，将符合条件的请求响应，通过ajax转发到另一个特定地址。技术要点在于使用猴子补丁的方法改写XMLHttpRequest，从而实现在扩展程序中获取请求的responseBody的逻辑。
 
 ## Documentation
 
