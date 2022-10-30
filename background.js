@@ -16,21 +16,16 @@ chrome.storage.sync.get(['targetUrl','targetOrigin', 'requestUrl', 'requestMetho
 });
 
 // 通用写法：url适配时亮显page_action
-// When the extension is installed or upgraded ...
 chrome.runtime.onInstalled.addListener(function() {
-  // Replace all rules ...
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    // With a new rule ...
     chrome.declarativeContent.onPageChanged.addRules([
       {
-        // That fires when a page's URL contains a 'g' ...
         conditions: [
           // 监听域名匹配
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlContains: targetOrigin },
           })
         ],
-        // And shows the extension's page action.
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
       }
     ]);
@@ -39,9 +34,7 @@ chrome.runtime.onInstalled.addListener(function() {
 
 // 修改配置项后，storage变化，触发全局变量的更新
 chrome.storage.onChanged.addListener((changes) => {
-  // console.log(changes);
   for(let key in changes){
-    // console.log(key);
     let val = changes[key];
     window[key] = val.newValue;
   }
@@ -55,6 +48,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     contentType: "application/json",
     data: JSON.stringify(request.data),
     success: (msg) => {
+      console.log(msg);
       // 使用sendResponse向消息源回传响应消息
       sendResponse({
         type: Number(msg.code) === 200 ? 'success' : 'danger',
