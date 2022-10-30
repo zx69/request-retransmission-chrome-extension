@@ -10,6 +10,7 @@
 ## Display gif (douban.com)
 
 ![display-douban.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67c65f79c7f84977a9747d83a0c24ed8~tplv-k3u1fbpfcp-watermark.image?)
+
 ## Install 插件安装
 
 1. 从[github仓库](https://github.com/zx69/request-retransmission-chrome-extension)下载代码到本地并解压。
