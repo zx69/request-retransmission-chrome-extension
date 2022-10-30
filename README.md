@@ -9,7 +9,7 @@
 
 ## Display gif (douban.com)
 
-![display-douban.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67c65f79c7f84977a9747d83a0c24ed8~tplv-k3u1fbpfcp-watermark.image?)
+![display-douban.gif](https://raw.githubusercontent.com/zx69/front-end-articles/main/request-retransmission-chrome-extension/images/display-douban.gif)
 
 ## Install 插件安装
 
